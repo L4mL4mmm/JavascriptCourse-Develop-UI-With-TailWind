@@ -1,0 +1,90 @@
+/* 1. Reset & Base */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. Custom Scrollbar cho Main Content */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+/* 3. Bài 6: Input Field Styling */
+.input-field {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s;
+}
+.input-field:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* 4. Bài 10: Stat Card */
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 5. Bài 5: Tour Card */
+.tour-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+.tour-card:hover {
+    transform: translateY(-10px);
+}
+
+/* 6. Bài 8: Xử lý Dark Mode tùy chỉnh */
+/* Khi thẻ html có class 'dark' (Tailwind chuẩn) hoặc body có class 'is-dark' */
+.is-dark {
+    background-color: #0f172a; /* Slate 900 */
+    color: #f8fafc;
+}
+
+.is-dark .bg-white {
+    background-color: #1e293b; /* Slate 800 */
+}
+
+.is-dark .stat-card, 
+.is-dark #search, 
+.is-dark #about {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: white;
+}
+
+.is-dark .pricing-table {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+
+.is-dark .text-gray-600, 
+.is-dark .text-gray-500 {
+    color: #94a3b8;
+}
+
+/* Dark mode cho Header */
+.is-dark header {
+    background-color: rgba(30, 41, 59, 0.8);
+    border-bottom: 1px solid #334155;
+}
+
+.is-dark input {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: white;
+}
